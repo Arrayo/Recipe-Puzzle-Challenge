@@ -40,20 +40,20 @@ export class recipeResolver {
     // Get All Recipes
     @Query(() => [Recipe])
     @UseMiddleware(isAuth)
-    getAllRecipes() {
-        return Recipe.find();
+    async getAllRecipes() {
+        return await Recipe.find();
     }
 
     // Get My Recipes
     @Query(() => [Recipe])
     @UseMiddleware(isAuth)
-    getMyRecipes(
+    async getMyRecipes(
         @Arg('author') author: number,
         @Ctx() { payload }: MyContext) {
         if (payload!.userId != author) {
             throw new Error(`The user ${payload?.userName} has not recipes`);
         } else {
-            return Recipe.find({ where: { author } });
+            return await Recipe.find({ where: { author } });
         }
     }
 
