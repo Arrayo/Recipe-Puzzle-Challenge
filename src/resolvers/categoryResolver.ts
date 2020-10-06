@@ -30,8 +30,8 @@ export class categoryResolver {
     // Get All Categories || Get categories and its recipes
     @Query(() => [Category])
     @UseMiddleware(isAuth)
-    getAllCategories() {
-        return Category.find({ relations: ['recipes'] });
+    async getAllCategories() {
+        return await Category.find({ relations: ['recipes'] });
     }
 
     // Get One Category || Get one category and its recipes
