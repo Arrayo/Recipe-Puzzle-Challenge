@@ -22,3 +22,6 @@ Steps to run this project:
 }
 2. AccessToken must be like: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjksInVzZXJFbWFpbCI6IklzYTFAZ21haWwuY29tIiwidXNlck5hbWUiOiJJc2EgMSIsImlhdCI6MTYwMTY1ODIyNSwiZXhwIjoxNjAyMjYzMDI1fQ.BI6MnHVm4XSu9eMibDKoQONYoIixMtBK0kCR7qES--4
 
+## API published in heroku
+1. URL: `https://fcprecipe.herokuapp.com/`
+
